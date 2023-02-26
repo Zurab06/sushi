@@ -1,12 +1,18 @@
 
 import './App.css';
-import MainPage from './components/MainPage';
+import MainPage from './pages/MainPage/MainPage';
+import Sets from './pages/Sets/Sets';
+
+
 
 function App() {
   return (
-    <div className="App">
-   <MainPage/>
-    </div>
+    <>
+    
+   {/* <MainPage/> */}
+   
+    </>
+    
   );
 }
 
