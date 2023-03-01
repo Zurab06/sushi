@@ -1,12 +1,24 @@
 import s from "../Sets/Sets.module.scss";
-import setsImg from '../../assets/img/sets.jpg';
+import setsLogo from '../../assets/img/setsLogo.png';
 import { products } from "./db";
-
+import { useDispatch } from "react-redux";
+import { addItem } from "../../features/cartSlice";
 const Sets = () => {
+  
+  const dispatch = useDispatch()
+  
+  const addProduct = (id: any) => {
+  const prod = products.find((el:any) => el.id === id)
+  console.log(prod)
+  dispatch(addItem(prod))
+}
+
+
+
   return (
     <div className={s.sets_body}>
       <div className={s.sets_header}>
-        <img src={setsImg} alt="" />
+        <img src={setsLogo} alt="" />
         <p>Сеты</p>
       </div>
       <div className={s.sort_select}>
@@ -19,7 +31,7 @@ const Sets = () => {
       <div>
         {products?.map((item: any) => {
           return (
-            <div className={s.cart}>
+            <div key={item.id} className={s.cart}>
               <div>
                 <img src={item.image} alt="" />
               </div>
@@ -33,7 +45,7 @@ const Sets = () => {
                 </div>
                 <div className={s.cart_price}>
                   <span>{item.price} СОМ</span>
-                  <button>Хочу!</button>
+                  <button onClick={() => addProduct(item.id)}>Хочу!</button>
                 </div>
               </div>
             </div>
