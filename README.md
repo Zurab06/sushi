@@ -1,46 +1,15 @@
-# Getting Started with Create React App
+Добро пожаловать в проект заказа суши и роллов!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Наш проект разработан с использованием современных технологий и фреймворков, таких как React, Redux, TypeScript, SCSS, React Router, MongoDB, Express, Redux Toolkit, Skeleton и Node.js. Он предназначен для любителей японской кухни, которые хотят быстро и удобно заказать свои любимые блюда в любое время.
 
-## Available Scripts
+Основная цель нашего проекта - предоставить пользователям простой и удобный интерфейс для заказа суши и роллов. Для этого мы использовали React и Redux, чтобы создать динамические компоненты, которые легко адаптируются к любому устройству и позволяют пользователям выбирать и заказывать блюда в режиме реального времени.
 
-In the project directory, you can run:
+Мы также использовали TypeScript для обеспечения типобезопасности и более надежной работы нашего приложения. SCSS использовался для создания красивого и современного дизайна, а Skeleton помог нам быстро развернуть базовую структуру нашего проекта.
 
-### `npm start`
+Для управления маршрутизацией мы использовали React Router, который позволяет пользователям легко перемещаться по страницам нашего приложения. Мы также использовали MongoDB и Express для создания нашего сервера и базы данных, что позволяет нам легко хранить и обрабатывать данные о заказах.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Redux Toolkit - это удобное средство для управления состоянием нашего приложения, позволяющее нам быстро и эффективно обрабатывать и обновлять данные.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+В нашем проекте задействованы различные участники команды, каждый из которых работает над различными компонентами. Мы стремимся создать высококачественный продукт, поэтому все наши компоненты проходят тщательное тестирование и код-ревью.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Мы надеемся, что вы насладитесь использованием нашего приложения и найдете в нем все, что нужно для заказа своих любимых блюд японской кухни. Если у вас есть какие-либо вопросы или отзывы, пожалуйста, свяжитесь с нами.
