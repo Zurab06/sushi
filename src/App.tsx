@@ -3,6 +3,7 @@ import Basket from './pages/Basket/Basket';
 import { Routes, Route, Link } from 'react-router-dom';
 import Sets from './pages/Sets/Sets';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/basket" element={<Basket />} />
       </Routes> */}
       <Header />
+      <Footer />
     </>
   );
 }
