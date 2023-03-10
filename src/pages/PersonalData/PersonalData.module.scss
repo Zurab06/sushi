@@ -1,10 +1,20 @@
 .container {
   margin: 0 auto;
-}
-.container {
   max-width: 360px;
   background-color: #f2f2f2;
   height: 100%;
+}
+.content {
+  h1 {
+    font-family: '?????';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #111111;
+    margin-bottom: 15px;
+  }
 }
 
 .data {
@@ -39,5 +49,134 @@
     line-height: 14px;
     color: #a4acad;
     border: solid 1px white;
+  }
+}
+
+.delivery {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .courier {
+    width: 170px;
+    height: 40px;
+    color: #fafafa;
+    background: #ff9846;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+    font-family: '?????';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: #ffffff;
+  }
+  .pickup {
+    width: 170px;
+    height: 40px;
+    color: #000;
+    background: #ffffff;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+    font-family: '?????';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.adress {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  input {
+    width: 160px;
+    height: 40px;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 5px;
+    font-family: '?????';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #a4acad;
+    border: solid 1px white;
+    margin-bottom: 10px;
+  }
+  .street {
+    width: 340px;
+    height: 40px;
+    height: 40px;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 5px;
+    font-family: '?????';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #a4acad;
+    border: solid 1px white;
+    margin-bottom: 10px;
+  }
+  .home {
+    width: 340px;
+    height: 40px;
+    height: 40px;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 5px;
+    font-family: '?????';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #a4acad;
+    border: solid 1px white;
+    margin-bottom: 10px;
+  }
+}
+
+.payment {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  img {
+    margin-right: 10px;
+  }
+  .cash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 40px;
+    color: #fafafa;
+    background: #ff9846;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+    font-family: '?????';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: #ffffff;
+  }
+  .card {
+    width: 170px;
+    height: 40px;
+    color: #000;
+    background: #ffffff;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+    font-family: '?????';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
