@@ -8,15 +8,15 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <>
-      {/* <Link to="/sets">Sets</Link>
+      <Header />
+      <Link to="/sets">Sets</Link>
       <Link to="/basket">Basket</Link>
 
       <Routes>
         <Route path="/sets" element={<Sets />} />
         <Route path="/basket" element={<Basket />} />
-      </Routes> */}
-      <Header />
-      <Footer />
+      </Routes>
+      {/* <Footer /> */}
     </>
   );
 }

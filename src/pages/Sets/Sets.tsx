@@ -1,9 +1,10 @@
 import s from "../Sets/Sets.module.scss";
 import setsLogo from '../../assets/img/setsLogo.png';
 import { products } from "./db";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../../features/cartSlice";
 const Sets = () => {
+  const items = useSelector((state: any) => state.cartSlice.items);
   
   const dispatch = useDispatch()
   
@@ -13,7 +14,8 @@ const Sets = () => {
   dispatch(addItem(prod))
 }
 
-
+const json = JSON.stringify(items);
+localStorage.setItem("cart", json);
 
   return (
     <div className={s.sets_body}>
