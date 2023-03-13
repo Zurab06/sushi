@@ -5,7 +5,7 @@ import s from "../Basket/Basket.module.scss";
 const Basket = () => {
   const items = useSelector((state: any) => state.cartSlice.items);
   const {count} = useSelector((state: any) => state.cartSlice.items);
-const dispatch = useDispatch()
+  const dispatch = useDispatch()
   const onClickPlus = (id:any) => {
   
       dispatch(

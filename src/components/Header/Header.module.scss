@@ -1,7 +1,9 @@
 .container {
-  max-width: 380px;
+  margin: 0 auto;
+  max-width: 360px;
   height: 60px;
   margin-top: 15px;
+  border-bottom: 1px solid #a4acad;
 }
 .content {
   display: flex;
