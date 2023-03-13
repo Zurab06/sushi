@@ -1,13 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 const Header = () => {
   return (
     <header>
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.logo}>
-            <img src="./assets/logo.svg" alt="Logo_sushi" />
-          </div>
+          <Link to={'/'}>
+            <div className={styles.logo}>
+              <img src="./assets/logo.svg" alt="Logo_sushi" />
+            </div>
+          </Link>
           <div className={styles.contact}>
             <span>Наш телефон:</span>
             <div className={styles.numberPhone}>89888235658</div>

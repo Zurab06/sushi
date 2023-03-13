@@ -1,0 +1,43 @@
+.container {
+  margin: 0 auto;
+}
+.container {
+  max-width: 360px;
+  background-color: #f2f2f2;
+  height: 100%;
+}
+
+.data {
+  display: flex;
+  justify-content: space-around;
+
+  .surname {
+    width: 160px;
+    height: 40px;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 5px;
+    font-family: '?????';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #a4acad;
+    border: solid 1px white;
+  }
+
+  .name {
+    width: 160px;
+    height: 40px;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 5px;
+    font-family: '?????';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #a4acad;
+    border: solid 1px white;
+  }
+}

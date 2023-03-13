@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Footer.module.scss';
 const Footer = () => {
   return (
-    <div className="container">
+    <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.txt}>
           <h2>Заказать суши в Ингушетии</h2>
