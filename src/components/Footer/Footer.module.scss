@@ -1,0 +1,67 @@
+.content {
+  max-width: 330px;
+  margin-left: 10px;
+}
+.txt {
+  h2 {
+    font-family: 'DIN Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #a4acad;
+  }
+  span {
+    margin-top: 15px;
+    font-family: 'DIN Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    color: #a4acad;
+  }
+}
+
+.items {
+  max-width: 212px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.messagers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  span {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 200px;
+    font-family: 'DIN Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #a4acad;
+  }
+
+  img {
+    margin-bottom: 20px;
+  }
+  .tel {
+    margin-left: 20px;
+  }
+}
+.adress {
+  max-width: 170px;
+  font-family: 'DIN Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #a4acad;
+}
