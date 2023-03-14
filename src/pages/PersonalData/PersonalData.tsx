@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styles from './PersonalData.module.scss';
 
 const PersonalData = () => {
-  //update
   const [surname, setSurname] = useState('');
   const [name, setName] = useState('');
   const [courier, setCourier] = useState('Курьером');
