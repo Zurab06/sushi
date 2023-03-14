@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './PersonalData.module.scss';
 
 const PersonalData = () => {
+  const [surname, setSurname] = useState('');
+  const [name, setName] = useState('');
+  const [courier, setCourier] = useState('Курьером');
+  const [street, setStreet] = useState('');
+  const [flat, setFlate] = useState('');
+  const [entrance, setEntrance] = useState('');
+  const [floor, setFloor] = useState('');
+  const [code, setCode] = useState('');
+  const [cash, setCash] = useState('Наличными');
+  const [oddMoney, setOddMoney] = useState(false);
+  const [sum, setSum] = useState('');
+  const [email, setEmail] = useState('');
+  const [comment, setComment] = useState('');
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -31,6 +45,16 @@ const PersonalData = () => {
             <img width="18px" src="./assets/card.svg" alt="card" /> Картой
           </button>
         </div>
+        <div className={styles.oddMoney}>
+          <input type="checkbox" className={styles.checkbox} />
+          <span>Подготовить сдачу с</span>
+          <input type="text" placeholder="Сумма" className={styles.sum} />
+        </div>
+        <div className={styles.email}>
+          <input type="text" placeholder="E-mail(Необязательно)" />
+          <input type="text" placeholder="Комменатрий к заказу" />
+        </div>
+        <button className={styles.btn}>Оформить заказ</button>
       </div>
     </div>
   );

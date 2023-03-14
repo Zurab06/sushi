@@ -180,3 +180,64 @@
     align-items: center;
   }
 }
+
+.oddMoney {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  span {
+    max-width: 181px;
+    font-family: '?????';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: #111111;
+  }
+  .sum {
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 5px;
+    width: 122px;
+    height: 40px;
+  }
+}
+
+.email {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+  input {
+    width: 340px;
+    height: 40px;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 5px;
+    font-family: '?????';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #a4acad;
+    border: solid 1px white;
+    margin-bottom: 10px;
+  }
+}
+
+.btn {
+  background: #f46d40;
+  border-radius: 5px;
+  width: 340px;
+  height: 48px;
+  border: none;
+  font-family: '?????';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #f2f2f2;
+  margin-left: 10px;
+}

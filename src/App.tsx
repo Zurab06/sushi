@@ -13,7 +13,7 @@ function App() {
       <Header />
       <PersonalData />
 
-      <Link to="/sets">Sets</Link>
+      {/* <Link to="/sets">Sets</Link>
       <Link to="/basket">Basket</Link>
 
       <Routes>
@@ -21,7 +21,7 @@ function App() {
         <Route path="/sets" element={<Sets />} />
         <Route path="/basket" element={<Basket />} />
       </Routes>
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
