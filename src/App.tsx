@@ -12,8 +12,8 @@ function App() {
     <>
       <Header />
       <PersonalData />
-      {/* 
-      <Link to="/sets">Sets</Link>
+
+      {/* <Link to="/sets">Sets</Link>
       <Link to="/basket">Basket</Link>
 
       <Routes>
