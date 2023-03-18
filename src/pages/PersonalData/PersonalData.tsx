@@ -6,6 +6,7 @@ const PersonalData = () => {
   const [name, setName] = useState('');
   const [courier, setCourier] = useState('Курьером');
   const [street, setStreet] = useState('');
+  const [home, setHome] = useState('');
   const [flat, setFlate] = useState('');
   const [entrance, setEntrance] = useState('');
   const [floor, setFloor] = useState('');
