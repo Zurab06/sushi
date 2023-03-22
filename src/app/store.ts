@@ -4,7 +4,7 @@ import personalData from './features/personalData';
 export const store = configureStore({
   reducer: {
     cartSlice,
-    personalData
+    personalData,
   },
 });
 

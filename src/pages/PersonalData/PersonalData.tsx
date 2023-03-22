@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import styles from './PersonalData.module.scss';
-import { createPersonalData } from '../../app/features/personalData';
+import { addUserData, createPersonalData } from '../../app/features/personalData';
 import { AppDispatch } from '../../app/store';
+
 const PersonalData = () => {
   const dispatch = useDispatch<AppDispatch>();
 
