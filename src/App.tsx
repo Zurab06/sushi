@@ -7,7 +7,7 @@ import Footer from './components/Footer/Footer';
 import MainPage from './pages/MainPage/MainPage';
 import PersonalData from './pages/PersonalData/PersonalData';
 import Login from './pages/auth/AuthPage';
-
+//update
 function App() {
   return (
     <>
