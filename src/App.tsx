@@ -11,17 +11,17 @@ function App() {
   return (
     <>
       <Header />
-      <PersonalData />
+      {/* <PersonalData /> */}
 
-      {/* <Link to="/sets">Sets</Link>
+      <Link to="/sets">Sets</Link>
       <Link to="/basket">Basket</Link>
 
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/sets" element={<Sets />} />
+        {/* <Route path="/sets" element={<Sets />} /> */}
         <Route path="/basket" element={<Basket />} />
       </Routes>
-      <Footer /> */}
+      <Footer /> 
     </>
   );
 }
