@@ -1,19 +1,16 @@
-import s from "../Sets/Sets.module.scss";
+import s from '../Sets/Sets.module.scss';
 import setsLogo from '../../assets/img/setsLogo.png';
-import { products } from "./db";
-import { useDispatch } from "react-redux";
-import { addItem } from "../../features/cartSlice";
+import { products } from './db';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../app/features/cartSlice';
 const Sets = () => {
-  
-  const dispatch = useDispatch()
-  
+  const dispatch = useDispatch();
+
   const addProduct = (id: any) => {
-  const prod = products.find((el:any) => el.id === id)
-  console.log(prod)
-  dispatch(addItem(prod))
-}
-
-
+    const prod = products.find((el: any) => el.id === id);
+    console.log(prod);
+    dispatch(addItem(prod));
+  };
 
   return (
     <div className={s.sets_body}>
