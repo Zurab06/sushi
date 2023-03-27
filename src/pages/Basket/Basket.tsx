@@ -1,22 +1,20 @@
-import { useDispatch, useSelector } from "react-redux";
-import { addItem, minusItem } from "../../features/cartSlice";
-import s from "../Basket/Basket.module.scss";
+import { useDispatch, useSelector } from 'react-redux';
+import { addItem, minusItem } from '../../app/features/cartSlice';
+import s from '../Basket/Basket.module.scss';
 
 const Basket = () => {
   const items = useSelector((state: any) => state.cartSlice.items);
-  const {count} = useSelector((state: any) => state.cartSlice.items);
-  const dispatch = useDispatch()
-  const onClickPlus = (id:any) => {
-  
-      dispatch(
-        addItem({
-          id,
-        })
-      );
-    
+  const { count } = useSelector((state: any) => state.cartSlice.items);
+  const dispatch = useDispatch();
+  const onClickPlus = (id: any) => {
+    dispatch(
+      addItem({
+        id,
+      }),
+    );
   };
 
-  const onClickMinus = (id:any) => {
+  const onClickMinus = (id: any) => {
     if (count !== 0) {
       dispatch(minusItem(id));
     }
