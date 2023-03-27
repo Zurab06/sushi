@@ -30,15 +30,15 @@ const AuthForm: React.FC = () => {
           control={control}
           name="login"
           rules={loginValidation}
-          render={({ field }) => (
+          render={({ field: { value, onChange } }) => (
             <TextField
               label="Логин"
               size="small"
               margin="normal"
               className={styles.authForm__input}
               fullWidth={true}
-              onChange={(e) => field.onChange(e)}
-              value={field.value}
+              onChange={onChange}
+              value={value}
               error={!!errors.login?.message}
               helperText={errors.login?.message}
             />
@@ -48,15 +48,15 @@ const AuthForm: React.FC = () => {
           control={control}
           name="password"
           rules={passwordValidation}
-          render={({ field }) => (
+          render={({ field: { value, onChange } }) => (
             <TextField
               label="Пароль"
               size="small"
               margin="normal"
               className={styles.authForm__input}
               fullWidth={true}
-              onChange={(e) => field.onChange(e)}
-              value={field.value}
+              onChange={onChange}
+              value={value}
               error={!!errors.password?.message}
               helperText={errors.password?.message}
             />

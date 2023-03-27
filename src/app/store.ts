@@ -1,3 +1,4 @@
+import authSlice from './features/authSlice';
 import { configureStore } from '@reduxjs/toolkit';
 import cartSlice from './features/cartSlice';
 import personalData from './features/personalData';
@@ -5,6 +6,7 @@ export const store = configureStore({
   reducer: {
     cartSlice,
     personalData,
+    authSlice,
   },
 });
 
