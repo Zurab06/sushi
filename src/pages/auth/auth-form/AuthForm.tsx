@@ -2,7 +2,7 @@ import { Typography } from '@mui/material';
 import React from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { useForm, Controller, SubmitHandler, useFormState } from 'react-hook-form';
+import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
 import styles from './AuthForm.scss';
 import { loginValidation, passwordValidation } from './validation';
@@ -13,13 +13,14 @@ interface ISignInForm {
 }
 
 const AuthForm: React.FC = () => {
-  const { handleSubmit, control } = useForm<ISignInForm>();
-  const { errors } = useFormState({
+  const {
+    handleSubmit,
     control,
-  });
-  console.log(errors);
+    formState: { errors },
+  } = useForm<ISignInForm>();
 
   const onSubmit: SubmitHandler<ISignInForm> = (data) => console.log(data);
+
   return (
     <div className={styles.authForm}>
       <Typography variant="h4" component="div">
@@ -30,15 +31,15 @@ const AuthForm: React.FC = () => {
           control={control}
           name="login"
           rules={loginValidation}
-          render={({ field }) => (
+          render={({ field: { value, onChange } }) => (
             <TextField
               label="Логин"
               size="small"
               margin="normal"
               className={styles.authForm__input}
               fullWidth={true}
-              onChange={(e) => field.onChange(e)}
-              value={field.value}
+              onChange={onChange}
+              value={value}
               error={!!errors.login?.message}
               helperText={errors.login?.message}
             />
@@ -48,15 +49,15 @@ const AuthForm: React.FC = () => {
           control={control}
           name="password"
           rules={passwordValidation}
-          render={({ field }) => (
+          render={({ field: { value, onChange } }) => (
             <TextField
               label="Пароль"
               size="small"
               margin="normal"
               className={styles.authForm__input}
               fullWidth={true}
-              onChange={(e) => field.onChange(e)}
-              value={field.value}
+              onChange={onChange}
+              value={value}
               error={!!errors.password?.message}
               helperText={errors.password?.message}
             />
