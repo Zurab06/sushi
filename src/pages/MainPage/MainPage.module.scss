@@ -1,12 +1,13 @@
 .container{
     
-        width: auto;
+        width: 600px;
         display: flex;
         justify-content: center;
         //align-items: center;
         margin: 3px;
         flex-wrap: wrap;
-        background-color:  #F2F2F2;;
+        background-color:  #F2F2F2;
+        padding: 10px;
         
 }
 body{
