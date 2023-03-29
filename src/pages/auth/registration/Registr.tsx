@@ -1,31 +1,24 @@
-import { Typography } from '@mui/material';
 import React from 'react';
 import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import { useForm, Controller, SubmitHandler } from 'react-hook-form';
-
-import styles from './AuthForm.scss';
-import { loginValidation, passwordValidation } from './validation';
-
-interface ISignInForm {
+import { SubmitHandler, useForm, Controller } from 'react-hook-form';
+import styles from './Registr.module.scss';
+import { loginValidation, passwordValidation } from '../auth-form/validation';
+import { Button } from '@mui/material';
+type Inputs = {
   login: string;
   password: string;
-}
+};
 
-const AuthForm: React.FC = () => {
+const Registr = () => {
   const {
     handleSubmit,
     control,
     formState: { errors },
-  } = useForm<ISignInForm>();
-
-  const onSubmit: SubmitHandler<ISignInForm> = (data) => console.log(data);
+  } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
   return (
-    <div className={styles.authForm}>
-      <Typography variant="h4" component="div">
-        Войдите
-      </Typography>
-      <form onSubmit={handleSubmit(onSubmit)} className={styles.authForm__form}>
+    <div>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <Controller
           control={control}
           name="login"
@@ -35,7 +28,7 @@ const AuthForm: React.FC = () => {
               label="Логин"
               size="small"
               margin="normal"
-              className={styles.authForm__input}
+              className={styles.registrForm__input}
               fullWidth={true}
               onChange={onChange}
               value={value}
@@ -53,7 +46,7 @@ const AuthForm: React.FC = () => {
               label="Пароль"
               size="small"
               margin="normal"
-              className={styles.authForm__input}
+              className={styles.registrForm__input}
               fullWidth={true}
               onChange={onChange}
               value={value}
@@ -62,19 +55,12 @@ const AuthForm: React.FC = () => {
             />
           )}
         />
-        <Button
-          type="submit"
-          variant="contained"
-          fullWidth={true}
-          disableElevation={true}
-          sx={{
-            marginTop: 2,
-          }}>
-          Войти
+        <Button variant="contained" color="success">
+          Зарегестрироваться
         </Button>
       </form>
     </div>
   );
 };
 
-export default AuthForm;
+export default Registr;
