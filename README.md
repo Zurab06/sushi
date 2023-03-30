@@ -31,7 +31,7 @@ npm start
 src/ - Исходный код приложения
 public/ - Статические файлы
 config/ - Конфигурационные файлы
-Контакты
-Автор: githum.com/Zurab06
+<h4>Контакты
+<div>Автор:<div/> githum.com/Zurab06
 <div>Электронная почта:<div/> 
 gaunt0066@gmail.com
