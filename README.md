@@ -1,11 +1,11 @@
 Проект с использованием следующих технологий:
-<li>JavaScript<li/>
-<li>React<li/>
-<li>Redux-toolkit<li/>
-<li>WebPack<li/>
-<li>Express<li/>
-<li>Node.js<li/>
-<li>MongoDB<li/>
+<li>JavaScript
+<li>React
+<li>Redux-toolkit
+<li>WebPack
+<li>Express
+<li>Node.js
+<li>MongoDB
 <li>CSS3
 
 
@@ -33,5 +33,5 @@ public/ - Статические файлы
 config/ - Конфигурационные файлы
 Контакты
 Автор: githum.com/Zurab06
-Электронная почта: 
+<div>Электронная почта:<div/> 
 gaunt0066@gmail.com
