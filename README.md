@@ -32,6 +32,6 @@ src/ - Исходный код приложения
 public/ - Статические файлы
 config/ - Конфигурационные файлы
 <h4>Контакты
-<div>Автор:<div/> github.com/Zurab06
+<div>Автор:<div/> [github.com](https://github.com/)/Zurab06
 <div>Электронная почта:<div/> 
 gaunt0066@gmail.com
