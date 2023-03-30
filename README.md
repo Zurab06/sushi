@@ -6,7 +6,7 @@
 <li>Express<li/>
 <li>Node.js<li/>
 <li>MongoDB<li/>
-<li>CSS3<li/>
+<li>CSS3
 
 
 О проекте:
