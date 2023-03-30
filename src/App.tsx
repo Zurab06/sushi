@@ -19,7 +19,7 @@ function App() {
 <Link to='/'>Main</Link>
       <Routes>
          <Route path="/" element={<MainPage />} />
-        {/* <Route path="/sets" element={<Sets />} /> */}
+         <Route path="/sets" element={<Sets />} /> 
        <Route path="/basket" element={<Basket />} />
         <Route path="/login" element={<Login />} />
         <Route path="/PersonalData" element={<PersonalData />} /> 
