@@ -1,4 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from '../../axios';
+
+export const userLogin = createAsyncThunk('authSlice/postLoginData', async (params, thunkApi) => {
+  try {
+    const { data } = axios.post('/login', params);
+    if (data.message) {
+      return thunkApi.rejectWithValue(data.message);
+    }
+    return data;
+  } catch (error) {
+    return thunkApi.rejectWithValue(error);
+  }
+});
 
 const initialState = {
   user: [],
@@ -13,5 +26,4 @@ export const authSlice = createSlice({
   extraReducers: {},
 });
 
-
-export default authSlice.reducer
+export default authSlice.reducer;
