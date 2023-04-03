@@ -1,6 +1,7 @@
+
 .sets_body{
     font-family: 'Roboto Flex', sans-serif;
-    width: 100%;
+    width: 600px;
     background: #E5E5E5;
     display: flex;
     justify-content: center;
@@ -9,7 +10,6 @@
 }
 .sets_header {
     display: flex;
-    justify-content: center;
     justify-content: space-between;
     align-items: center;
     width: 103px;
@@ -23,11 +23,13 @@
 
 .sort_select {
     margin: 0px 0 15px 0;
+    position: relative;
+    
 
 }
 
 .select_css {
-    width: 330px;
+    width: 600px;
     height: 50px;
     border: none;
     font-size: 24px;
@@ -39,10 +41,12 @@
 .cart {
     background: #FFFFFF;
     border-radius: 10px;
-    width: 330px;
+    width: 600px;
     height: 120px;
     margin-bottom: 10px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     img{
         width: 100px;

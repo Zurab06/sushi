@@ -1,4 +1,4 @@
-import photo from '../../assets/img/photo.png'
+
 import photo2 from '../../assets/img/photo2.png'
 
 // interface IProduct {
@@ -11,7 +11,7 @@ import photo2 from '../../assets/img/photo2.png'
 
 export const products: any = [
     {   id: 1,
-        image: photo,
+        image: photo2,
         name: 'Саломон сет',
         weight: 1050,
         pieces: 30,
@@ -25,7 +25,7 @@ export const products: any = [
         price: 1479
     },
     {   id: 3,
-        image: photo,
+        image: photo2,
         name: 'Саломон сет',
         weight: 1050,
         pieces: 30,
@@ -39,7 +39,7 @@ export const products: any = [
         price: 1479
     },
     {   id: 5,
-        image: photo,
+        image: photo2,
         name: 'Саломон сет',
         weight: 1050,
         pieces: 30,
@@ -53,7 +53,7 @@ export const products: any = [
         price: 1479
     },
     {   id: 7,
-        image: photo,
+        image: photo2,
         name: 'Саломон сет',
         weight: 1050,
         pieces: 30,
@@ -67,7 +67,7 @@ export const products: any = [
         price: 1479
     },
     {   id: 9,
-        image: photo,
+        image: photo2,
         name: 'Саломон сет',
         weight: 1050,
         pieces: 30,
