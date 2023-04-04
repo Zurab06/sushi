@@ -23,7 +23,6 @@ const AuthForm: React.FC = () => {
       password: '',
     },
   });
-
   const onSubmit: SubmitHandler<ISignInForm> = (data) => console.log(data);
   return (
     <div className={styles.authForm}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import AuthForm from './auth-form/AuthForm';
-import styles from './AuthPage.scss';
+import styles from './AuthPage.module.scss';
 import Registr from './registration/Registr';
 const AuthPage = () => {
   return (
