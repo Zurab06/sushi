@@ -24,7 +24,7 @@ function App() {
         <Route path="/PersonalData" element={<PersonalData />} />
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
