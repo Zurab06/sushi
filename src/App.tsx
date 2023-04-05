@@ -13,19 +13,19 @@ function App() {
     <>
       <Header />
 
-
       <Link to="/sets">Sets</Link>
       <Link to="/basket">Basket</Link>
-<Link to='/'>Main</Link>
+      <Link to="/">Main</Link>
       <Routes>
-         <Route path="/" element={<MainPage />} />
-         <Route path="/sets" element={<Sets />} /> 
-       <Route path="/basket" element={<Basket />} />
+        <Route path="/" element={<MainPage />} />
+        <Route path="/sets" element={<Sets />} />
+        <Route path="/basket" element={<Basket />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/PersonalData" element={<PersonalData />} /> 
+        <Route path="/PersonalData" element={<PersonalData />} />
       </Routes>
-      <Footer /> 
 
+
+      {/* <Footer /> */}
 
     </>
   );
