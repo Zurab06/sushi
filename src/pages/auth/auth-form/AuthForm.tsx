@@ -17,8 +17,12 @@ const AuthForm: React.FC = () => {
     handleSubmit,
     control,
     formState: { errors },
-  } = useForm<ISignInForm>();
-
+  } = useForm<ISignInForm>({
+    defaultValues: {
+      login: '',
+      password: '',
+    },
+  });
   const onSubmit: SubmitHandler<ISignInForm> = (data) => console.log(data);
 
   return (

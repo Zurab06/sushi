@@ -1,11 +1,14 @@
+body{
+    background-color: aqua;
+}
 .basketBody{
     font-family: 'Roboto Flex', sans-serif;
     width: 100%;
     background: #E5E5E5;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
     align-items: center;
+
+margin-bottom: 100px;
 }
 
 .basketHeader {
