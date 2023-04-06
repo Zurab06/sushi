@@ -25,9 +25,7 @@ const Basket = () => {
     
       <div className={s.basketHeader}>
         <p>Корзина</p>
-        {
-          
-        }
+       исправить
         <div>
           {items?.map((item: any) => {
             return (
