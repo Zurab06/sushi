@@ -17,15 +17,18 @@ const Sets = () => {
       <div className={s.sets_header}>
         <img src={setsLogo} alt="" />
         <p>Сеты</p>
+        <div className="dropdown">
+  <button className="dropbtn">Dropdown</button>
+  <ul className="dropdown-content">
+    <li><a href="#">Item 1</a></li>
+    <li><a href="#">Item 2</a></li>
+    <li><a href="#">Item 3</a></li>
+    <li><a href="#">Item 4</a></li>
+  </ul>
+</div>
+
       </div>
-      <div className={s.sort_select}>
-        <select className={s.select_css}>
-          <option>Сортировка</option>
-          <option>Пункт 1</option>
-          <option>Пункт 2</option>
-        </select>
-      </div>
-      <div>
+     
         {products?.map((item: any) => {
           return (
             <div key={item.id} className={s.cart}>
@@ -48,7 +51,7 @@ const Sets = () => {
             </div>
           );
         })}
-      </div>
+      
     </div>
   );
 };

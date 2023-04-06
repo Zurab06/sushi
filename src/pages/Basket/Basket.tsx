@@ -19,10 +19,15 @@ const Basket = () => {
       dispatch(minusItem(id));
     }
   };
+ 
   return (
     <div className={s.basketBody}>
+    
       <div className={s.basketHeader}>
         <p>Корзина</p>
+        {
+          
+        }
         <div>
           {items?.map((item: any) => {
             return (

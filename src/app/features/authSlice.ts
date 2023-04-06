@@ -24,6 +24,21 @@ export const userLogin = createAsyncThunk(
   },
 );
 
+export const userRegistr = createAsyncThunk(
+  'authSlice/postRegistrData',
+  async (params: TypeAuthData, thunkApi) => {
+    try {
+      const { data } = await axios.post('/registration', params);
+      if (data.message) {
+        return thunkApi.rejectWithValue(data.message);
+      }
+      return data;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error);
+    }
+  },
+);
+
 const initialState = {
   user: [],
   token: '',

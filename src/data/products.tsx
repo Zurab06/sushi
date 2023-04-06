@@ -1,4 +1,4 @@
-import photo from '../assets/img/photo.png';
+
 import photo1 from '../assets/img/sushi.jpg';
 import photo2 from '../assets/img/soup.jpg';
 
@@ -16,7 +16,7 @@ export const categoryItem: CategoryItem[] = [
     weight: 1050,
     pieces: 30,
     price: 1500,
-    Image: photo,
+    Image: photo2,
   },
   {
     name: 'суши',
@@ -37,35 +37,35 @@ export const categoryItem: CategoryItem[] = [
     weight: 1050,
     pieces: 30,
     price: 1500,
-    Image: photo,
+    Image: photo2,
   },
   {
     name: 'Саломон сет',
     weight: 1050,
     pieces: 30,
     price: 1500,
-    Image: photo,
+    Image: photo2,
   },
   {
     name: 'Саломон',
     weight: 1050,
     pieces: 30,
     price: 1500,
-    Image: photo,
+    Image: photo2,
   },
   {
     name: 'Саломон сет',
     weight: 1050,
     pieces: 30,
     price: 1500,
-    Image: photo,
+    Image: photo2,
   },
   {
     name: 'Саломон',
     weight: 1050,
     pieces: 30,
     price: 1500,
-    Image: photo,
+    Image: photo2,
   },
 
   {
@@ -73,6 +73,6 @@ export const categoryItem: CategoryItem[] = [
     weight: 1050,
     pieces: 30,
     price: 1500,
-    Image: photo,
+    Image: photo2,
   },
 ];

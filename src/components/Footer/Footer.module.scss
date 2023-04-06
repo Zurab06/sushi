@@ -1,19 +1,17 @@
-.body{
-}
+
 
 .container {
-
-  background-color: aqua;
+  width: 600px;
   padding: auto;
   margin-top: 100px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .content {
-  max-width: 330px;
-  margin-left: 10px;
+  max-width: 500px;
 }
 .txt {
   h2 {
@@ -38,10 +36,10 @@
 }
 
 .items {
-  max-width: 212px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 40px;
 }
 
 .messagers {
