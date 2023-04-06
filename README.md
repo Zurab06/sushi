@@ -1,5 +1,5 @@
 Проект с использованием следующих технологий:
-<li>JavaScript
+<li>TypeScript
 <li>React
 <li>Redux-toolkit
 <li>WebPack
