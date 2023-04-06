@@ -27,6 +27,12 @@ const Header = () => {
           <div className={styles.titleSearch}>
             <img src="./assets/Search.svg" alt="Search" />
           </div>
+          <div className={styles.login}>
+            <Link to={'/login'}>
+              {' '}
+              <span>Войти</span>
+            </Link>
+          </div>
         </div>
       </div>
     </header>

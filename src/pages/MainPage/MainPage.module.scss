@@ -1,16 +1,15 @@
 .container{
     
-        width: auto;
+        width: 600px;
         display: flex;
         justify-content: center;
-        //align-items: center;
         margin: 3px;
         flex-wrap: wrap;
-        background-color:  #F2F2F2;;
+        padding: 10px;
         
 }
 body{
-    width: 90%px;
+    width: 90%;
     background: #E5E5E5;
     display: flex;
     justify-content: center;
