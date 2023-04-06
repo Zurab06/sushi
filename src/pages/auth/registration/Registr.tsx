@@ -4,18 +4,29 @@ import { SubmitHandler, useForm, Controller } from 'react-hook-form';
 import styles from './Registr.module.scss';
 import { loginValidation, passwordValidation } from '../auth-form/validation';
 import { Button } from '@mui/material';
+import { useAppDispatch } from '../../../app/store';
+import { userLogin } from '../../../app/features/authSlice';
+
 type Inputs = {
   login: string;
   password: string;
 };
 
 const Registr = () => {
+  const dispatch = useAppDispatch();
   const {
     handleSubmit,
     control,
     formState: { errors },
-  } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  } = useForm<Inputs>({
+    defaultValues: {
+      login: '',
+      password: '',
+    },
+  });
+  console.log(errors);
+
+  const onSubmit: SubmitHandler<Inputs> = (data) => dispatch(userLogin(data));
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -28,7 +39,7 @@ const Registr = () => {
               label="Логин"
               size="small"
               margin="normal"
-              className={styles.registrForm__input}
+              className={styles}
               fullWidth={true}
               onChange={onChange}
               value={value}
@@ -55,7 +66,15 @@ const Registr = () => {
             />
           )}
         />
-        <Button variant="contained" color="success">
+        <Button
+          type="submit"
+          variant="contained"
+          color="success"
+          fullWidth={true}
+          disableElevation={true}
+          sx={{
+            marginTop: 2,
+          }}>
           Зарегестрироваться
         </Button>
       </form>

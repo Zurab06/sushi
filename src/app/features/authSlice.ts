@@ -1,17 +1,43 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from '../../axios';
 
-export const userLogin = createAsyncThunk('authSlice/postLoginData', async (params, thunkApi) => {
-  try {
-    const { data } = axios.post('/login', params);
-    if (data.message) {
-      return thunkApi.rejectWithValue(data.message);
+type TypeAuthData = {
+  login: string;
+  password: string;
+};
+
+export const userLogin = createAsyncThunk(
+  'authSlice/postLoginData',
+  async (params: TypeAuthData, thunkApi) => {
+    console.log(params);
+
+    try {
+      const { data } = await axios.post('/login', params);
+
+      if (data.message) {
+        return thunkApi.rejectWithValue(data.message);
+      }
+      return data;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error);
     }
-    return data;
-  } catch (error) {
-    return thunkApi.rejectWithValue(error);
-  }
-});
+  },
+);
+
+export const userRegistr = createAsyncThunk(
+  'authSlice/postRegistrData',
+  async (params: TypeAuthData, thunkApi) => {
+    try {
+      const { data } = await axios.post('/registration', params);
+      if (data.message) {
+        return thunkApi.rejectWithValue(data.message);
+      }
+      return data;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error);
+    }
+  },
+);
 
 const initialState = {
   user: [],
