@@ -10,7 +10,7 @@ import { useAppDispatch } from '../../../app/store';
 import { userLogin } from '../../../app/features/authSlice';
 
 interface ISignInForm {
-  login: string;
+  username: string;
   password: string;
 }
 
@@ -22,7 +22,7 @@ const AuthForm: React.FC = () => {
     formState: { errors },
   } = useForm<ISignInForm>({
     defaultValues: {
-      login: '',
+      username: '',
       password: '',
     },
   });
@@ -36,7 +36,7 @@ const AuthForm: React.FC = () => {
       <form onSubmit={handleSubmit(onSubmit)} className={styles.authForm__form}>
         <Controller
           control={control}
-          name="login"
+          name="username"
           rules={loginValidation}
           render={({ field: { value, onChange } }) => (
             <TextField
@@ -47,8 +47,8 @@ const AuthForm: React.FC = () => {
               fullWidth={true}
               onChange={onChange}
               value={value}
-              error={!!errors.login?.message}
-              helperText={errors.login?.message}
+              error={!!errors.username?.message}
+              helperText={errors.username?.message}
             />
           )}
         />
