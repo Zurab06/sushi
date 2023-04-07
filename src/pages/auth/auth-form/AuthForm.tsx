@@ -6,6 +6,8 @@ import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
 import styles from './AuthForm.scss';
 import { loginValidation, passwordValidation } from './validation';
+import { useAppDispatch } from '../../../app/store';
+import { userLogin } from '../../../app/features/authSlice';
 
 interface ISignInForm {
   login: string;
@@ -13,6 +15,7 @@ interface ISignInForm {
 }
 
 const AuthForm: React.FC = () => {
+  const dispatch = useAppDispatch();
   const {
     handleSubmit,
     control,
@@ -23,7 +26,7 @@ const AuthForm: React.FC = () => {
       password: '',
     },
   });
-  const onSubmit: SubmitHandler<ISignInForm> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<ISignInForm> = (data) => dispatch(userLogin(data));
 
   return (
     <div className={styles.authForm}>

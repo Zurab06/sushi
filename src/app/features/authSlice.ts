@@ -9,14 +9,14 @@ type TypeAuthData = {
 export const userLogin = createAsyncThunk(
   'authSlice/postLoginData',
   async (params: TypeAuthData, thunkApi) => {
-    console.log(params);
-
     try {
       const { data } = await axios.post('/login', params);
 
       if (data.message) {
         return thunkApi.rejectWithValue(data.message);
       }
+      localStorage.setItem('token', data.token);
+      console.log(data);
       return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error);

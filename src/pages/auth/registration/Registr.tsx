@@ -5,7 +5,7 @@ import styles from './Registr.module.scss';
 import { loginValidation, passwordValidation } from '../auth-form/validation';
 import { Button } from '@mui/material';
 import { useAppDispatch } from '../../../app/store';
-import { userLogin } from '../../../app/features/authSlice';
+import { userLogin, userRegistr } from '../../../app/features/authSlice';
 
 type Inputs = {
   login: string;
@@ -26,7 +26,7 @@ const Registr = () => {
   });
   console.log(errors);
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => dispatch(userLogin(data));
+  const onSubmit: SubmitHandler<Inputs> = (data) => dispatch(userRegistr(data));
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
