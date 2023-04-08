@@ -6,24 +6,27 @@ import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 
 import styles from './AuthForm.scss';
 import { loginValidation, passwordValidation } from './validation';
+import { useAppDispatch } from '../../../app/store';
+import { userLogin } from '../../../app/features/authSlice';
 
 interface ISignInForm {
-  login: string;
+  username: string;
   password: string;
 }
 
 const AuthForm: React.FC = () => {
+  const dispatch = useAppDispatch();
   const {
     handleSubmit,
     control,
     formState: { errors },
   } = useForm<ISignInForm>({
     defaultValues: {
-      login: '',
+      username: '',
       password: '',
     },
   });
-  const onSubmit: SubmitHandler<ISignInForm> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<ISignInForm> = (data) => dispatch(userLogin(data));
 
   return (
     <div className={styles.authForm}>
@@ -33,7 +36,7 @@ const AuthForm: React.FC = () => {
       <form onSubmit={handleSubmit(onSubmit)} className={styles.authForm__form}>
         <Controller
           control={control}
-          name="login"
+          name="username"
           rules={loginValidation}
           render={({ field: { value, onChange } }) => (
             <TextField
@@ -44,8 +47,8 @@ const AuthForm: React.FC = () => {
               fullWidth={true}
               onChange={onChange}
               value={value}
-              error={!!errors.login?.message}
-              helperText={errors.login?.message}
+              error={!!errors.username?.message}
+              helperText={errors.username?.message}
             />
           )}
         />
