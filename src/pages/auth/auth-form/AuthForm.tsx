@@ -8,6 +8,7 @@ import styles from './AuthForm.scss';
 import { loginValidation, passwordValidation } from './validation';
 import { useAppDispatch } from '../../../app/store';
 import { userLogin } from '../../../app/features/authSlice';
+import { Link } from 'react-router-dom';
 
 interface ISignInForm {
   username: string;
@@ -81,6 +82,19 @@ const AuthForm: React.FC = () => {
           Войти
         </Button>
       </form>
+      <Link to="/registration">
+        <Button
+          type="submit"
+          variant="contained"
+          color="success"
+          fullWidth={true}
+          disableElevation={true}
+          sx={{
+            marginTop: 2,
+          }}>
+          Зарегестрироваться
+        </Button>
+      </Link>
     </div>
   );
 };

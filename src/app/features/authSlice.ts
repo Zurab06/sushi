@@ -48,6 +48,14 @@ export const userRegistr = createAsyncThunk(
     }
   },
 );
+export const authMe = async () => {
+  try {
+    const { data } = await axios.get('/auth/me');
+    return data;
+  } catch (error) {
+    return error;
+  }
+};
 
 const initialState: initialStateType = {
   user: [],
@@ -75,5 +83,7 @@ export const authSlice = createSlice({
     });
   },
 });
+
+// export isAuth =
 
 export default authSlice.reducer;
