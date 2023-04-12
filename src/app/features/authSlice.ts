@@ -11,6 +11,7 @@ export interface initialStateType {
   user: PersonalDataType[];
   token: string;
   status: string;
+  registr: string;
 }
 export const userLogin = createAsyncThunk(
   'authSlice/postLoginData',
@@ -61,6 +62,7 @@ const initialState: initialStateType = {
   user: [],
   token: '',
   status: 'loading',
+  registr: ''
 };
 
 export const authSlice = createSlice({
@@ -81,6 +83,8 @@ export const authSlice = createSlice({
       state.user = [];
       state.status = 'error';
     });
+    //REGISTR
+    
   },
 });
 
