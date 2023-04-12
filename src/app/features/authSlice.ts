@@ -1,22 +1,32 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from '../../axios';
+import { PersonalDataType } from './personalData';
 
 type TypeAuthData = {
-  login: string;
+  username: string;
   password: string;
 };
 
+export interface initialStateType {
+  user: PersonalDataType[];
+  token: string;
+  status: string;
+}
 export const userLogin = createAsyncThunk(
   'authSlice/postLoginData',
   async (params: TypeAuthData, thunkApi) => {
-    console.log(params);
-
     try {
-      const { data } = await axios.post('/login', params);
+      const { data } = await axios.post('/login', {
+        username: params.username,
+        password: params.password,
+      });
 
       if (data.message) {
         return thunkApi.rejectWithValue(data.message);
       }
+
+      localStorage.setItem('token', data.token);
+
       return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error);
@@ -38,8 +48,16 @@ export const userRegistr = createAsyncThunk(
     }
   },
 );
+export const authMe = async () => {
+  try {
+    const { data } = await axios.get('/auth/me');
+    return data;
+  } catch (error) {
+    return error;
+  }
+};
 
-const initialState = {
+const initialState: initialStateType = {
   user: [],
   token: '',
   status: 'loading',
@@ -49,7 +67,23 @@ export const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {},
-  extraReducers: {},
+  extraReducers: (builder) => {
+    //LOGIN
+    builder.addCase(userLogin.pending, (state, action) => {
+      state.user = [];
+      state.status = 'loading';
+    });
+    builder.addCase(userLogin.fulfilled, (state, action) => {
+      state.user = action.payload;
+      state.status = 'success';
+    });
+    builder.addCase(userLogin.rejected, (state, action) => {
+      state.user = [];
+      state.status = 'error';
+    });
+  },
 });
+
+// export isAuth =
 
 export default authSlice.reducer;

@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import MainPage from './pages/MainPage/MainPage';
 import PersonalData from './pages/PersonalData/PersonalData';
 import Login from './pages/auth/AuthPage';
+import Registr from './pages/auth/registration/Registr';
 //update
 function App() {
   return (
@@ -22,11 +23,16 @@ function App() {
         <Route path="/basket" element={<Basket />} />
         <Route path="/login" element={<Login />} />
         <Route path="/PersonalData" element={<PersonalData />} />
+        <Route path="/registration" element={<Registr />} />
       </Routes>
 
+<<<<<<< HEAD
 
       <Footer />
 
+=======
+      {/* <Footer /> */}
+>>>>>>> 8a6c30a5030c4d03a2951c99431f29ba56cd6bce
     </>
   );
 }

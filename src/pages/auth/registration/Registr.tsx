@@ -5,10 +5,10 @@ import styles from './Registr.module.scss';
 import { loginValidation, passwordValidation } from '../auth-form/validation';
 import { Button } from '@mui/material';
 import { useAppDispatch } from '../../../app/store';
-import { userLogin } from '../../../app/features/authSlice';
+import { userRegistr } from '../../../app/features/authSlice';
 
 type Inputs = {
-  login: string;
+  username: string;
   password: string;
 };
 
@@ -20,19 +20,19 @@ const Registr = () => {
     formState: { errors },
   } = useForm<Inputs>({
     defaultValues: {
-      login: '',
+      username: '',
       password: '',
     },
   });
   console.log(errors);
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => dispatch(userLogin(data));
+  const onSubmit: SubmitHandler<Inputs> = (data) => dispatch(userRegistr(data));
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Controller
           control={control}
-          name="login"
+          name="username"
           rules={loginValidation}
           render={({ field: { value, onChange } }) => (
             <TextField
@@ -43,8 +43,8 @@ const Registr = () => {
               fullWidth={true}
               onChange={onChange}
               value={value}
-              error={!!errors.login?.message}
-              helperText={errors.login?.message}
+              error={!!errors.username?.message}
+              helperText={errors.username?.message}
             />
           )}
         />
