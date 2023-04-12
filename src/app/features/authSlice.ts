@@ -11,6 +11,7 @@ export interface initialStateType {
   user: PersonalDataType[];
   token: string;
   status: string;
+  registr: string;
 }
 export const userLogin = createAsyncThunk(
   'authSlice/postLoginData',
@@ -48,11 +49,20 @@ export const userRegistr = createAsyncThunk(
     }
   },
 );
+export const authMe = async () => {
+  try {
+    const { data } = await axios.get('/auth/me');
+    return data;
+  } catch (error) {
+    return error;
+  }
+};
 
 const initialState: initialStateType = {
   user: [],
   token: '',
   status: 'loading',
+  registr: ''
 };
 
 export const authSlice = createSlice({
@@ -73,7 +83,11 @@ export const authSlice = createSlice({
       state.user = [];
       state.status = 'error';
     });
+    //REGISTR
+    
   },
 });
+
+// export isAuth =
 
 export default authSlice.reducer;
