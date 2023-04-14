@@ -1,11 +1,11 @@
-import React from 'react';
-import TextField from '@mui/material/TextField';
-import { SubmitHandler, useForm, Controller } from 'react-hook-form';
-import styles from './Registr.module.scss';
-import { loginValidation, passwordValidation } from '../auth-form/validation';
-import { Button } from '@mui/material';
-import { useAppDispatch } from '../../../app/store';
-import { userRegistr } from '../../../app/features/authSlice';
+import React from "react";
+import TextField from "@mui/material/TextField";
+import { SubmitHandler, useForm, Controller } from "react-hook-form";
+import styles from "./Registr.module.scss";
+import { loginValidation, passwordValidation } from "../auth-form/validation";
+import { Button } from "@mui/material";
+import { useAppDispatch } from "../../../app/store";
+import { userRegistr } from "../../../app/features/authSlice";
 
 type Inputs = {
   username: string;
@@ -20,8 +20,8 @@ const Registr = () => {
     formState: { errors },
   } = useForm<Inputs>({
     defaultValues: {
-      username: '',
-      password: '',
+      username: "",
+      password: "",
     },
   });
   console.log(errors);
@@ -74,8 +74,9 @@ const Registr = () => {
           disableElevation={true}
           sx={{
             marginTop: 2,
-          }}>
-          Зарегестрироваться
+          }}
+        >
+          Зарегистрироваться
         </Button>
       </form>
     </div>

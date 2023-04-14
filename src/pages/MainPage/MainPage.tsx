@@ -19,7 +19,7 @@ const MainPage = () => {
   return (
     <div className={styles.container}>
       {
-        categories?.map((item: any) => (<Categories key={item.id} {...item} />))
+        categories.map((item: any) => (<Categories key={item.id} {...item} />))
       }
       <div>{}</div>
     </div>
