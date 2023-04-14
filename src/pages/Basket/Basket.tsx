@@ -22,14 +22,13 @@ const Basket = () => {
  
   return (
     <div className={s.basketBody}>
-    
       <div className={s.basketHeader}>
         <p>Корзина</p>
-        {
-          
-        }
         <div>
-          {items?.map((item: any) => {
+          { !items   ? (
+            <div>Корзина пуста</div>
+          ) :
+          items.map((item: any) => {
             return (
               <div key={item.id} className={s.cart}>
                 <div>
@@ -43,8 +42,11 @@ const Basket = () => {
                 </div>
               </div>
             );
-          })}
+          })
+        
+        }
         </div>
+
       </div>
     </div>
   );

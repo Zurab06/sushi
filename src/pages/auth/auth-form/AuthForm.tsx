@@ -14,8 +14,7 @@ import { Link } from 'react-router-dom';
 interface ISignInForm {
   username: string;
   password: string;
-}
-
+} //update
 const AuthForm: React.FC = () => {
   // const isAuth = useSelector(isAuthMe);
   // console.log(isAuth);

@@ -26,7 +26,13 @@ function App() {
         <Route path="/registration" element={<Registr />} />
       </Routes>
 
+<<<<<<< HEAD
+
+      <Footer />
+
+=======
       {/* <Footer /> */}
+>>>>>>> 8a6c30a5030c4d03a2951c99431f29ba56cd6bce
     </>
   );
 }
