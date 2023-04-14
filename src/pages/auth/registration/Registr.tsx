@@ -29,7 +29,7 @@ const Registr = () => {
 
   const onSubmit: SubmitHandler<Inputs> = async (params) => {
     //сделал запрос/  хочу сделать так чсобы после регистрации показывало форму войти
-    const data = dispatch(userRegistr(params));
+    const data = await dispatch(userRegistr(params));
     console.log(data);
   };
 

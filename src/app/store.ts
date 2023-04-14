@@ -5,9 +5,9 @@ import personalData from './features/personalData';
 import { useDispatch } from 'react-redux';
 export const store = configureStore({
   reducer: {
-    cartSlice,
-    personalData,
-    authSlice,
+    cart: cartSlice,
+    personalData: personalData,
+    auth: authSlice,
   },
 });
 
