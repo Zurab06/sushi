@@ -16,9 +16,15 @@ const MainPage = () => {
   const [categories, setCategories] = useState(categoryItem);
   return (
     <div className={styles.container}>
+
       {categories?.map((item: any) => (
         <Categories {...item} />
       ))}
+
+      {
+        categories?.map((item: any) => (<Categories key={item.id} {...item} />))
+      }
+
       <div>{}</div>
     </div>
   );

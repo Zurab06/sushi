@@ -26,7 +26,10 @@ function App() {
         <Route path="/registration" element={<Registr />} />
       </Routes>
 
+
       {/* <Footer /> */}
+
+
     </>
   );
 }

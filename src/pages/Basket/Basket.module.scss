@@ -1,16 +1,19 @@
+body{
+    margin-bottom: 44px;
+}
 
 .basketBody{
     font-family: 'Roboto Flex', sans-serif;
-    width: 100%;
     background: #c82929;
     display: flex;
     justify-content: space-between;
-    
+    margin-bottom: 100px;
     width: 600px;
 
 }
 
 .basketHeader {
+    margin-bottom: 77px;
     width: 103px;
     height: 30px;
     margin: 15px 0 15px 0;
