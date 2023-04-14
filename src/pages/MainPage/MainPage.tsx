@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import Categories from '../categories/CategoryCard'
-import styles from '../MainPage/MainPage.module.scss'
-import { categoryItem } from '../../data/products'
+import { useState } from 'react';
+import Categories from '../categories/CategoryCard';
+import styles from '../MainPage/MainPage.module.scss';
+import { categoryItem } from '../../data/products';
 interface ICategory {
   name: string;
   weight: number;
@@ -9,21 +9,32 @@ interface ICategory {
   price: number;
 }
 interface IMainProps {
-  categoryItem: Array<ICategory>
+  categoryItem: Array<ICategory>;
 }
-
 
 const MainPage = () => {
-  const [categories, setCategories] = useState(categoryItem)
-  console.log(categories);
+  const [categories, setCategories] = useState(categoryItem);
   return (
     <div className={styles.container}>
-      {
-        categories?.map((item: any) => (<Categories key={item.id} {...item} />))
-      }
+      {categories?.map((item: any) => (
+        <Categories {...item} />
+      ))}
+
+      {categories?.map((item: any) => (
+        <Categories key={item.id} {...item} />
+      ))}
+
+      {categories?.map((item: any) => (
+        <Categories {...item} />
+      ))}
+
+      {categories?.map((item: any) => (
+        <Categories key={item.id} {...item} />
+      ))}
+
       <div>{}</div>
     </div>
-  )
-}
+  );
+};
 
-export default MainPage
+export default MainPage;
