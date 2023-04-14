@@ -56,14 +56,19 @@ export const userRegistr = createAsyncThunk(
     }
   },
 );
+
 export const authMe = createAsyncThunk('auth/fetchAuthMe', async (params, thunkApi) => {
+
   try {
     const { data } = await axios.get('/auth/me');
     return data;
   } catch (error) {
     return error;
   }
+
 });
+
+
 
 const initialState: initialStateType = {
   user: [],
@@ -107,6 +112,8 @@ export const authSlice = createSlice({
   },
 });
 
+
 // export const isAuthMe = (state: initialStateType) => state.auth.token;
+
 
 export default authSlice.reducer;
