@@ -7,10 +7,18 @@ type TypeAuthData = {
   password: string;
 };
 
+interface authMeType {
+  _id: string;
+  username: string;
+  password: string;
+  roles: [];
+  __v: 0;
+}
 export interface initialStateType {
   user: PersonalDataType[];
-  token: string;
+  token: null | string;
   status: string;
+  registr: string;
 }
 export const userLogin = createAsyncThunk(
   'authSlice/postLoginData',
@@ -48,19 +56,25 @@ export const userRegistr = createAsyncThunk(
     }
   },
 );
-export const authMe = async () => {
+
+export const authMe = createAsyncThunk('auth/fetchAuthMe', async (params, thunkApi) => {
+
   try {
     const { data } = await axios.get('/auth/me');
     return data;
   } catch (error) {
     return error;
   }
-};
+
+});
+
+
 
 const initialState: initialStateType = {
   user: [],
-  token: '',
+  token: null,
   status: 'loading',
+  registr: '',
 };
 
 export const authSlice = createSlice({
@@ -69,21 +83,37 @@ export const authSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     //LOGIN
-    builder.addCase(userLogin.pending, (state, action) => {
+    builder.addCase(userLogin.pending, (state) => {
       state.user = [];
       state.status = 'loading';
     });
     builder.addCase(userLogin.fulfilled, (state, action) => {
       state.user = action.payload;
+      state.token = action.payload.token;
       state.status = 'success';
     });
-    builder.addCase(userLogin.rejected, (state, action) => {
+    builder.addCase(userLogin.rejected, (state) => {
+      state.user = [];
+      state.status = 'error';
+    });
+    //Auth Me
+    builder.addCase(authMe.pending, (state) => {
+      state.user = [];
+      state.status = 'loading';
+    });
+    builder.addCase(authMe.fulfilled, (state, action) => {
+      state.user = action.payload;
+      state.status = 'success';
+    });
+    builder.addCase(authMe.rejected, (state) => {
       state.user = [];
       state.status = 'error';
     });
   },
 });
 
-// export isAuth =
+
+// export const isAuthMe = (state: initialStateType) => state.auth.token;
+
 
 export default authSlice.reducer;

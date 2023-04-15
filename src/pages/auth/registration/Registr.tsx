@@ -1,11 +1,15 @@
-import React from "react";
-import TextField from "@mui/material/TextField";
-import { SubmitHandler, useForm, Controller } from "react-hook-form";
-import styles from "./Registr.module.scss";
-import { loginValidation, passwordValidation } from "../auth-form/validation";
-import { Button } from "@mui/material";
-import { useAppDispatch } from "../../../app/store";
-import { userRegistr } from "../../../app/features/authSlice";
+
+
+import React from 'react';
+import TextField from '@mui/material/TextField';
+import { SubmitHandler, useForm, Controller } from 'react-hook-form';
+import styles from './Registr.module.scss';
+import { loginValidation, passwordValidation } from '../auth-form/validation';
+import { Button } from '@mui/material';
+
+import { useAppDispatch } from '../../../app/store';
+import { userRegistr } from '../../../app/features/authSlice';
+import { Link } from 'react-router-dom';
 
 type Inputs = {
   username: string;
@@ -24,9 +28,13 @@ const Registr = () => {
       password: "",
     },
   });
-  console.log(errors);
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => dispatch(userRegistr(data));
+  const onSubmit: SubmitHandler<Inputs> = async (params) => {
+    //сделал запрос/  хочу сделать так чсобы после регистрации показывало форму войти
+    const data = await dispatch(userRegistr(params));
+    console.log(data);
+  };
+
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -66,6 +74,7 @@ const Registr = () => {
             />
           )}
         />
+
         <Button
           type="submit"
           variant="contained"

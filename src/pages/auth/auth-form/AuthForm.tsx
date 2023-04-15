@@ -10,12 +10,17 @@ import { useAppDispatch } from '../../../app/store';
 import { userLogin } from '../../../app/features/authSlice';
 import { Link } from 'react-router-dom';
 
+// import { useSelector } from 'react-redux';
+
+
 interface ISignInForm {
   username: string;
   password: string;
-}
-
+} //update
 const AuthForm: React.FC = () => {
+  // const isAuth = useSelector(isAuthMe);
+  // console.log(isAuth);
+
   const dispatch = useAppDispatch();
   const {
     handleSubmit,
@@ -27,7 +32,16 @@ const AuthForm: React.FC = () => {
       password: '',
     },
   });
-  const onSubmit: SubmitHandler<ISignInForm> = (data) => dispatch(userLogin(data));
+  const onSubmit: SubmitHandler<ISignInForm> = async (params) => {
+    const data = await dispatch(userLogin(params));
+    if (!data.payload) {
+      alert('Произошла оштбка');
+    }
+  };
+
+  // if (isAuth) {
+  //   return <Navigate to={'/'} />;
+  // }
 
   return (
     <div className={styles.authForm}>

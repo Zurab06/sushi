@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
+import { useSelector } from 'react-redux';
+// import { isAuthMe } from '../../app/features/authSlice';
 const Header = () => {
+  // const isAuth = useSelector(isAuthMe);
+  // console.log(isAuth);
+
   return (
     <header>
       <div className={styles.container}>
@@ -30,6 +35,7 @@ const Header = () => {
           <div className={styles.login}>
             <Link to={'/login'}>
               {' '}
+              {/* {isAuth: <span>Выйти</span>: <span>Войти</span>} */}
               <span>Войти</span>
             </Link>
           </div>
