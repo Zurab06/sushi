@@ -15,8 +15,7 @@
 
  Команда проекта:
  <h5>https://github.com/Ingushetiya<h5/>
-  <h5>https://github.com/SultanHasanov<h5/>
-   <h5>https://github.com/oneOfThePeakyBlinders<h5/>
+  <h5>[github.com](https://github.com/)/Zurab06<h5/>
 
 Установка и запуск:
 Клонируйте репозиторий на свой локальный компьютер
