@@ -4,7 +4,7 @@ import photo2 from '../assets/img/soup.jpg';
 
 interface CategoryItem {
   id: number;
-  name: string;
+  name: String;
   weight: number;
   pieces: number;
   price: number;
