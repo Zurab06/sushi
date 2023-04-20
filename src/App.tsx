@@ -8,7 +8,6 @@ import MainPage from './pages/MainPage/MainPage';
 import PersonalData from './pages/PersonalData/PersonalData';
 import Login from './pages/auth/AuthPage';
 import Registr from './pages/auth/registration/Registr';
-import Categories from './pages/categories/CategoryCard';
 import { products } from './pages/Sets/db';
 import CategoryItem from './components/categoryItem/CategoryItem';
 import { useParams } from 'react-router-dom';
@@ -17,11 +16,9 @@ function App() {
   const { id } = useParams();
   return (
     <>
-      <Header />
-
-      <Link to="/sets">Sets</Link>
+      {/* <Link to="/sets">Sets</Link>
       <Link to="/basket">Basket</Link>
-      <Link to="/">Main</Link>
+      <Link to="/">Main</Link> */}
       <Routes>
         <Route path="*" element={<MainPage />} />
         <Route path="/sets" element={<Sets />} />

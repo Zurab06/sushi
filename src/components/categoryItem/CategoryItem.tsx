@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { categoryItem } from "../../data/products";
 import React from "react";
 import { useParams } from "react-router-dom";
 import styles from "./CategoryItem.module.scss";
@@ -16,7 +15,7 @@ const CategoryItem = () => {
     image: string;
     rating: any;
   }
-  const [items, setItems] = useState<IItem[]>();
+  const [item, setItem] = useState<IItem>();
   // useEffect(() => {
   //   console.log(products);
   // }, []);
@@ -24,9 +23,10 @@ const CategoryItem = () => {
   useEffect(() => {
     try {
       const getItems = async function () {
-        const { data } = await axios.get('https://fakestoreapi.com/products/'+id);
-        console.log(data);
-        setItems(data);
+        const { data } = await axios.get<IItem>(
+          `https://fakestoreapi.com/products/${id}`
+        );
+        setItem(data);
 
         // const { data } = await axios.get("https://6375f41b7e93bcb006be57c.mockapi.io/pizzas/" + id);
       };
@@ -36,20 +36,15 @@ const CategoryItem = () => {
     }
   }, []);
 
-  console.log(items);
-
   return (
     <div>
-      {items &&
-        items.map((item: any) => {
-          return (
-            <div>
-              <div key={item.id}></div>
-              <div>{item.title}</div>
-              <img className={styles.image} src={item.image} alt="" />
-            </div>
-          );
-        })}
+      {item && (
+        <div>
+        <div key={item.id}></div>
+        <div>{item.title}</div>
+        <img className={styles.image} src={item.image} alt="" />
+      </div>
+      )}
     </div>
     // <div> 123</div>
   );

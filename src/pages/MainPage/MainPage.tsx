@@ -1,29 +1,28 @@
-import { useState } from 'react';
-import Categories from '../categories/CategoryCard';
-import styles from '../MainPage/MainPage.module.scss';
-import { categoryItem } from '../../data/products';
-import { Link } from 'react-router-dom';
-interface ICategory {
-  name: string;
-  weight: number;
-  pieces: number;
-  price: number;
-}
-interface IMainProps {
-  categoryItem: Array<ICategory>;
-}
+import { useState, useEffect } from "react";
+import styles from './MainPage.module.scss'
+import { Link } from "react-router-dom";
+import { getCategories } from "../../api";
+import { Category } from "../../types/category";
+import Header from "../../components/Header/Header";
+import { CategoryCard } from "../../components/CategoryCard";
 
 const MainPage = () => {
-  const [categories, setCategories] = useState(categoryItem);
+  const [categories, setCategories] = useState<Category[]>([]);
+
+  useEffect(() => {
+    getCategories().then(setCategories);
+  }, []);
+
   return (
-    <div className={styles.container}>
-
-
-      {categories?.map((item: any) => (
-        <Link to={`categories/${item.id}`}key={item.id}><Categories  {...item} /></Link>
-      ))}
-
-      <div>{}</div>
+    <div>
+      <Header />
+      <div className={styles.categories}>
+        {categories.map((category) => (
+          <Link to={`categories/${category.id}`} key={category.id}>
+            <CategoryCard category={category} />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

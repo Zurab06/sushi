@@ -1,21 +1,17 @@
-.container{
-    
-        width: 600px;
-        display: flex;
-        justify-content: center;
-        margin: 3px;
-        flex-wrap: wrap;
-        padding: 10px;
-        
+.categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    max-width: 50vw;
+    margin-left: 25vw;
+    width: 100%;
+    margin-top: 20px;
 }
-body{
-    width: 14%;
-    background: #E5E5E5;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    
 
+@media (max-width: 756px) {
+    .categories {
+        grid-template-columns: 1fr 1fr;
+        max-width: 80vw;
+        margin-left: 10vw;
+    }
 }
