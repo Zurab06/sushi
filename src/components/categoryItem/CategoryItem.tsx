@@ -39,9 +39,9 @@ const CategoryItem = () => {
   return (
     <div>
       {item && (
-        <div>
+        <div className={styles.wrapper}>
         <div key={item.id}></div>
-        <div>{item.title}</div>
+        <div className={styles.title}>{item.title}</div>
         <img className={styles.image} src={item.image} alt="" />
       </div>
       )}
