@@ -1,6 +1,7 @@
 import { Category } from "../types/category";
 import { Product } from "../types/product";
 
+
 export async function getCategories(): Promise<Category[]> {
   await new Promise((res) => setTimeout(res, 1000));
 
