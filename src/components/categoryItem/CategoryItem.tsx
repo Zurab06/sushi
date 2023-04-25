@@ -40,10 +40,10 @@ const CategoryItem = () => {
     <div>
       {item && (
         <div className={styles.wrapper}>
-        <div key={item.id}></div>
-        <div className={styles.title}>{item.title}</div>
-        <img className={styles.image} src={item.image} alt="" />
-      </div>
+          <div key={item.id}></div>
+          <div className={styles.title}>{item.title}</div>
+          <img className={styles.image} src={item.image} alt="" />
+        </div>
       )}
     </div>
     // <div> 123</div>
