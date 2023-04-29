@@ -16,9 +16,6 @@ const CategoryItem = () => {
     rating: any;
   }
   const [item, setItem] = useState<IItem>();
-  // useEffect(() => {
-  //   console.log(products);
-  // }, []);
 
   useEffect(() => {
     try {
@@ -27,8 +24,6 @@ const CategoryItem = () => {
           `https://fakestoreapi.com/products/${id}`
         );
         setItem(data);
-
-        // const { data } = await axios.get("https://6375f41b7e93bcb006be57c.mockapi.io/pizzas/" + id);
       };
       getItems();
     } catch (error) {
@@ -46,7 +41,6 @@ const CategoryItem = () => {
         </div>
       )}
     </div>
-    // <div> 123</div>
   );
 };
 
