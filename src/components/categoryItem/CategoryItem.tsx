@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import React from "react";
 import { useParams } from "react-router-dom";
 import styles from "./CategoryItem.module.scss";
+import CategoryPage from '../../pages/CategoryPage'
 
 const CategoryItem = () => {
   const { id } = useParams();
@@ -35,9 +36,10 @@ const CategoryItem = () => {
     <div>
       {item && (
         <div className={styles.wrapper}>
-          <div key={item.id}></div>
+          <CategoryPage/>
+          {/* <div key={item.id}></div>
           <div className={styles.title}>{item.title}</div>
-          <img className={styles.image} src={item.image} alt="" />
+          <img className={styles.image} src={item.image} alt="" /> */}
         </div>
       )}
     </div>
