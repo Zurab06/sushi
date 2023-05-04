@@ -7,31 +7,37 @@ export async function getCategories(): Promise<Category[]> {
 
   return [
     {
+      item: 'pizza',
       id: 1,
       name: "пицца",
       imageUrl: "https://shorturl.at/pFJY7",
     },
     {
+      item: 'sushi',
       id: 2,
       name: "суши",
       imageUrl: "https://shorturl.at/pFJY7",
     },
     {
+      item: 'wok',
       id: 3,
       name: "WOK",
       imageUrl: "https://shorturl.at/pFJY7",
     },
     {
+      item: 'rolls',
       id: 4,
       name: "роллы",
       imageUrl: "https://shorturl.at/pFJY7",
     },
     {
+      item: 'salmonset',
       id: 5,
       name: "Саломон сет",
       imageUrl: "https://shorturl.at/pFJY7",
     },
     {
+      item: 'salmon',
       id: 6,
       name: "Саломон",
       imageUrl: "https://shorturl.at/pFJY7",
